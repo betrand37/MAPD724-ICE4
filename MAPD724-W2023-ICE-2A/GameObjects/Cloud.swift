@@ -3,7 +3,7 @@ import SpriteKit
 
 class Cloud : GameObject
 {
-    // initializer / constructor
+
     init()
     {
         super.init(imageString: "cloud", initialScale: 1.0)
@@ -44,11 +44,11 @@ class Cloud : GameObject
         // randomize the horizontal speed
         horizontalSpeed = CGFloat((randomSourse?.nextUniform())! * 4.0) - 2.0
         
-        // get a pseudo random number -313 to 313
+
         let randomX:Int = (randomSourse?.nextInt(upperBound: 524))! - 262
         position.x = CGFloat(randomX)
         
-        // get a pseudo random number 902 to 932
+  
         let randomY:Int = (randomSourse?.nextInt(upperBound: 30))! + 902
         position.y = CGFloat(randomY)
         
