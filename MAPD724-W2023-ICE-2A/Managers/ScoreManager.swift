@@ -1,8 +1,8 @@
-//
-//  ScoreManager.swift
-//  MAPD724-W2023-ICE-2A
-//
-//  Created by Kobbie on 30/01/2023.
-//
+import SpriteKit
+import UIKit
 
-import Foundation
+class ScoreManager
+{
+    public static var Score: Int = 0
+    public static var Lives: Int = 5
+}
