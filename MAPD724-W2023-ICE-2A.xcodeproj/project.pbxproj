@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7191CFD29889BC500BF4D24 /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7191CFC29889BC500BF4D24 /* CollisionManager.swift */; };
+		C7191CFF2988A36B00BF4D24 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7191CFE2988A36B00BF4D24 /* ScoreManager.swift */; };
 		C7DE9426297F541000625305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DE9425297F541000625305 /* AppDelegate.swift */; };
 		C7DE9428297F541000625305 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C7DE9427297F541000625305 /* GameScene.sks */; };
 		C7DE942C297F541000625305 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DE942B297F541000625305 /* GameScene.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7191CFC29889BC500BF4D24 /* CollisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
+		C7191CFE2988A36B00BF4D24 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
 		C7DE9422297F541000625305 /* MAPD724-W2023-ICE-2A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2023-ICE-2A.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DE9425297F541000625305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7DE9427297F541000625305 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7191CFB29889BA100BF4D24 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C7191CFC29889BC500BF4D24 /* CollisionManager.swift */,
+				C7191CFE2988A36B00BF4D24 /* ScoreManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		C7DE9419297F541000625305 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +118,7 @@
 		C7DE9424297F541000625305 /* MAPD724-W2023-ICE-2A */ = {
 			isa = PBXGroup;
 			children = (
+				C7191CFB29889BA100BF4D24 /* Managers */,
 				C7DE9462297F551700625305 /* Core */,
 				C7DE9465297F551700625305 /* GameObjects */,
 				C7DE943C297F54B700625305 /* Assets */,
@@ -277,9 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7191CFF2988A36B00BF4D24 /* ScoreManager.swift in Sources */,
 				C7DE942C297F541000625305 /* GameScene.swift in Sources */,
 				C7DE9468297F551700625305 /* GameProtocol.swift in Sources */,
 				C7DE946D297F60B800625305 /* Island.swift in Sources */,
+				C7191CFD29889BC500BF4D24 /* CollisionManager.swift in Sources */,
 				C7DE942E297F541000625305 /* GameViewController.swift in Sources */,
 				C7DE9426297F541000625305 /* AppDelegate.swift in Sources */,
 				C7DE9471297F660600625305 /* Cloud.swift in Sources */,

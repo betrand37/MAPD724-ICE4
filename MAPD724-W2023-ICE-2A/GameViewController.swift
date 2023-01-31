@@ -6,6 +6,11 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var LivesLabel: UILabel!
+    
+    @IBOutlet weak var ScoreLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +23,8 @@ class GameViewController: UIViewController {
             if let sceneNode = scene.rootNode as! GameScene? {
                 
                 sceneNode.scaleMode = .aspectFill
+                sceneNode.size.width = 800
+                sceneNode.size.height = 1800
                 
                 if let view = self.view as! SKView?
                 {
@@ -26,6 +33,8 @@ class GameViewController: UIViewController {
                     view.ignoresSiblingOrder = true
                     
                 }
+                
+                
             }
         }
     }
