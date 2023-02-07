@@ -7,6 +7,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dock51.ttf">
+            <string>Dock51</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -17,43 +22,122 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbb-Aa-Smy">
-                                <rect key="frame" x="20" y="114" width="55" height="24"/>
+                                <rect key="frame" x="20" y="114" width="55" height="22.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-Ga-nUU">
-                                <rect key="frame" x="279" y="114" width="131" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 99999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIe-Ga-nUU">
+                                <rect key="frame" x="253" y="116" width="157" height="21"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-GA-elc">
-                                <rect key="frame" x="20" y="114" width="55" height="24"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbN-GA-elc">
+                                <rect key="frame" x="20" y="116" width="139" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="kZ9-h2-zkm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="20"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play  Mail Pilot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vp-Aa-9pd">
+                                <rect key="frame" x="20" y="196.66666666666663" width="390" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="stb-I2-PlK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="60"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N23-5v-ZoD">
+                                <rect key="frame" x="154" y="439" width="123" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="36" name="DINCondensed-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="SbP-T6-aa1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taB-lN-9m3">
+                                <rect key="frame" x="20" y="303" width="390" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="M46-Ma-t7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="70"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6w-Da-u9L">
+                                <rect key="frame" x="154" y="439" width="123" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="RESTART">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="36" name="DINCondensed-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Z4g-oh-wp3"/>
+                                    <action selector="startButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="g6A-yU-pxY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JIe-Ga-nUU" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="8Po-Zw-z5i"/>
-                            <constraint firstItem="pbN-GA-elc" firstAttribute="baseline" secondItem="Xbb-Aa-Smy" secondAttribute="baseline" id="AH0-mV-3uP"/>
-                            <constraint firstItem="pbN-GA-elc" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="Jed-8Y-ca5"/>
-                            <constraint firstItem="Xbb-Aa-Smy" firstAttribute="baseline" secondItem="JIe-Ga-nUU" secondAttribute="baseline" id="O5o-Xs-dKi"/>
-                            <constraint firstItem="pbN-GA-elc" firstAttribute="leading" secondItem="Xbb-Aa-Smy" secondAttribute="leading" id="cw9-2h-NuE"/>
-                            <constraint firstItem="Xbb-Aa-Smy" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="55" id="hwv-zI-Aw8"/>
+                            <constraint firstItem="pbN-GA-elc" firstAttribute="baseline" secondItem="Xbb-Aa-Smy" secondAttribute="baseline" constant="1.3333333333333428" id="1x9-Zo-AZv"/>
+                            <constraint firstItem="pbN-GA-elc" firstAttribute="leading" secondItem="Xbb-Aa-Smy" secondAttribute="leading" id="2CP-cO-tPn"/>
+                            <constraint firstItem="9Vp-Aa-9pd" firstAttribute="top" secondItem="pbN-GA-elc" secondAttribute="bottom" constant="59.666666666666629" id="8hN-fL-3lh"/>
+                            <constraint firstItem="t6w-Da-u9L" firstAttribute="baseline" secondItem="N23-5v-ZoD" secondAttribute="baseline" id="F2Z-5E-f4Q"/>
+                            <constraint firstItem="9Vp-Aa-9pd" firstAttribute="leading" secondItem="taB-lN-9m3" secondAttribute="leading" id="Ff0-Jc-oAs"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="N23-5v-ZoD" secondAttribute="bottom" constant="403" id="HGT-oe-4yJ"/>
+                            <constraint firstItem="pbN-GA-elc" firstAttribute="centerY" secondItem="Xbb-Aa-Smy" secondAttribute="centerY" constant="1.3333333333333286" id="Hid-cS-MXb"/>
+                            <constraint firstItem="Xbb-Aa-Smy" firstAttribute="baseline" secondItem="JIe-Ga-nUU" secondAttribute="baseline" constant="-1.3333333333333428" id="JMd-or-cSB"/>
+                            <constraint firstItem="Xbb-Aa-Smy" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="JxC-WC-9FO"/>
+                            <constraint firstItem="N23-5v-ZoD" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="154" id="Rtx-ry-kmL"/>
+                            <constraint firstItem="JIe-Ga-nUU" firstAttribute="baseline" secondItem="pbN-GA-elc" secondAttribute="firstBaseline" id="TnJ-bz-5iF"/>
+                            <constraint firstItem="9Vp-Aa-9pd" firstAttribute="centerX" secondItem="N23-5v-ZoD" secondAttribute="centerX" id="Zcf-a4-RYh"/>
+                            <constraint firstItem="JIe-Ga-nUU" firstAttribute="leading" secondItem="pbN-GA-elc" secondAttribute="trailing" constant="94" id="amb-1h-4xk"/>
+                            <constraint firstItem="Xbb-Aa-Smy" firstAttribute="leading" secondItem="9Vp-Aa-9pd" secondAttribute="leading" id="bkM-8z-7Vw"/>
+                            <constraint firstItem="t6w-Da-u9L" firstAttribute="trailing" secondItem="N23-5v-ZoD" secondAttribute="trailing" id="gdo-Gz-ds8"/>
+                            <constraint firstItem="Xbb-Aa-Smy" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="55" id="kPT-u9-Vox"/>
+                            <constraint firstItem="JIe-Ga-nUU" firstAttribute="trailing" secondItem="9Vp-Aa-9pd" secondAttribute="trailing" id="pX4-aT-ouK"/>
+                            <constraint firstItem="JIe-Ga-nUU" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="rWf-NI-z9R"/>
+                            <constraint firstItem="N23-5v-ZoD" firstAttribute="leading" secondItem="t6w-Da-u9L" secondAttribute="leading" id="vFV-sE-abk"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="taB-lN-9m3" secondAttribute="bottom" constant="455" id="wXQ-tl-8Hx"/>
+                            <constraint firstItem="9Vp-Aa-9pd" firstAttribute="trailing" secondItem="taB-lN-9m3" secondAttribute="trailing" id="yME-5G-wIC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="EndLabel" destination="taB-lN-9m3" id="o6S-UF-5lV"/>
                         <outlet property="LifeLabel" destination="pbN-GA-elc" id="n9K-oW-R1l"/>
+                        <outlet property="RestartButton" destination="t6w-Da-u9L" id="3dz-Se-fla"/>
                         <outlet property="ScoreLabel" destination="JIe-Ga-nUU" id="fmy-dJ-yhJ"/>
+                        <outlet property="StartButton" destination="N23-5v-ZoD" id="wRc-F0-65J"/>
+                        <outlet property="StartLabel" destination="9Vp-Aa-9pd" id="5Dg-I5-5y1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="4"/>
+            <point key="canvasLocation" x="18" y="-5"/>
         </scene>
     </scenes>
     <resources>
